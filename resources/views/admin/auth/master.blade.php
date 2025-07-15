@@ -1,3 +1,7 @@
+@php
+  $admin= LaravelLocalization::getCurrentLocale() =='ar' ? 'admin-assets-rtl' : 'admin-assets';
+@endphp
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,20 +10,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
-    <title>Admin Dashboard - @yield('web-log')</title>
+    <title> {{ __('keywords.dashboard') }} - @yield('web-log')</title>
     <!-- Simple bar CSS -->
-    <link rel="stylesheet" href="{{asset('admin-assets')}}/css/simplebar.css">
+    <link rel="stylesheet" href="{{asset($admin)}}/css/simplebar.css">
     <!-- Fonts CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- Icons CSS -->
-    <link rel="stylesheet" href="{{asset('admin-assets')}}/css/feather.css">
+    <link rel="stylesheet" href="{{asset($admin)}}/css/feather.css">
     <!-- Date Range Picker CSS -->
-    <link rel="stylesheet" href="{{asset('admin-assets')}}/css/daterangepicker.css">
+    <link rel="stylesheet" href="{{asset($admin)}}/css/daterangepicker.css">
     <!-- App CSS -->
-    <link rel="stylesheet" href="{{asset('admin-assets')}}/css/app-light.css" id="lightTheme">
-    <link rel="stylesheet" href="{{asset('admin-assets')}}/css/app-dark.css" id="darkTheme" disabled>
+    <link rel="stylesheet" href="{{asset($admin)}}/css/app-light.css" id="lightTheme">
+    <link rel="stylesheet" href="{{asset($admin)}}/css/app-dark.css" id="darkTheme" disabled>
   </head>
-  <body class="light ">
+  <body class="light @if(LaravelLocalization::getCurrentLocale() == 'ar') rtl @endif ">
     <div class="wrapper vh-100">
       <div class="row align-items-center h-100">
         @yield('form');

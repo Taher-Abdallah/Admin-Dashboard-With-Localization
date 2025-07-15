@@ -1,5 +1,5 @@
 @extends('admin.auth.master')
-@section('web-log', 'Login')
+@section('web-log', __('keywords.login'))
 @section('form')
 <form class="col-lg-3 col-md-4 col-10 mx-auto text-center" method="POST" action="{{ route('login.store') }}">
     @csrf
@@ -12,23 +12,25 @@
               </g>
             </svg>
           </a>
-          <h1 class="h6 mb-3">Sign in</h1>
+          <h1 class="h6 mb-3">{{ __('keywords.Sign in') }}  
+          </h1>
     <x-auth-session-status class="mb-4" :status="session('status')" />
           <div class="form-group">
-            <x-input-label for="email" :value="__('Email')" />
-            <input type="email" id="inputEmail" class="form-control form-control-lg" value="{{ old('email') }}"  name="email" placeholder="Email address"  autofocus="">
+            <x-input-label for="email" :value="__('keywords.Email')" />
+            <input type="email" id="inputEmail" class="form-control form-control-lg" value="{{ old('email') }}"  name="email" placeholder="{{ __('keywords.Email') }}"  autofocus="">
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
           </div>
           <div class="form-group">
-            <x-input-label for="password" :value="__('Password')" />
-            <input type="password" id="inputPassword" class="form-control form-control-lg" name="password" placeholder="Password" >
+            <x-input-label for="password" :value="__('keywords.Password')" />
+            <input type="password" id="inputPassword" class="form-control form-control-lg" name="password" placeholder="{{ __('keywords.Password') }}" >
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
           </div>
           <div class="checkbox mb-3">
             <label>
               <input type="checkbox" value="remember-me"> Stay logged in </label>
           </div>
-          <button class="btn btn-lg btn-primary btn-block" type="submit">Let me in</button>
+          <button class="btn btn-lg btn-primary btn-block" type="submit">{{ __('keywords.Let me in') }}</button>
+          @include('admin.partials.lang')
           <p class="mt-5 mb-3 text-muted">© 2020</p>
         </form>
         @endsection

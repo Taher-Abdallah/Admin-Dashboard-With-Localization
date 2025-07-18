@@ -25,5 +25,7 @@
     </p>
                             {{-- services-nav --}}
         <x-side-bar  title="services"  href="{{ route('services.index') }} " icon=" fe-grid"></x-side-bar>
+                            {{-- features-nav --}}
+        <x-side-bar  title="features"  href="{{ route('features.index') }} " icon="fe-monitor"></x-side-bar>
 
       </aside>

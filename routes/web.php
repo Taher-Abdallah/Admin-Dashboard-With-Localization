@@ -1,8 +1,10 @@
 <?php
 
+use App\Models\Feature;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -29,10 +31,16 @@ Route::controller(AdminController::class)->prefix(LaravelLocalization::setLocale
 ->group(function () {
     Route::middleware('auth')->group(function () {
         Route::get('/', 'index')->name('index');
-
+        // =============================================  ServiceController
         Route::controller(ServiceController::class)->group(function () {
             Route::resource('services', ServiceController::class);
         });
+        // ============================================================  featuresController
+        Route::controller(FeatureController::class)->group(function () {
+            Route::resource('features', FeatureController::class);
+        });
+
+
     });
     require __DIR__.'/auth.php';
 });

@@ -45,7 +45,8 @@ return [
     'modals' => 'Modals',
     'tabs_accordion' => 'Tabs & Accordion',
     'progress' => 'Progress',
-
+    //features
+    'features' => 'Features',   
     // Widgets
     'widgets_new' => 'Widgets New',
 

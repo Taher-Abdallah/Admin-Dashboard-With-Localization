@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ServiceController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
@@ -28,16 +29,11 @@ Route::controller(AdminController::class)->prefix(LaravelLocalization::setLocale
 ->group(function () {
     Route::middleware('auth')->group(function () {
         Route::get('/', 'index')->name('index');
+
+        Route::controller(ServiceController::class)->group(function () {
+            Route::resource('services', ServiceController::class);
+        });
     });
     require __DIR__.'/auth.php';
-});
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 

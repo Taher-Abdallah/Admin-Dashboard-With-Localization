@@ -1,12 +1,14 @@
 <?php
 
 return [
+    //login
 'welcome' => 'Welcome',
 'dashboard'=> 'Dashboard',
 "Taher Dashboard"=> 'Taher Dashboard',
 'login' => 'Login',
 'Sign in' => 'Sign in',
 'Email' => 'Email',
+'logout' => 'Logout',
 'Password' => 'Password',
 'Let me in'=> 'Let me in',
     'default' => 'Default',
@@ -15,7 +17,24 @@ return [
     'saas_dashboard' => 'Saas Dashboard',
     'systems' => 'Systems',
     'components' => 'Components',
+    'show_data'=>'Show Data',
+    'back' => 'Back',
 
+    'services'=>'Services',
+    'no_records_found '=> 'No records found',
+    'add_new' => 'Add New',
+    'add_new_service' => 'Add New Service',
+    'title' => 'Title',
+    'description' => 'Description',
+    'image' => 'Image',
+    'actions' => 'Actions',
+    'icon' => 'Icon',
+    'submit' => 'Submit',
+    'created_successfully' => 'Created Successfully ',
+    'updated_successfully' => 'Data Updated Successfully ',
+    'deleted_successfully' => 'Deleted Successfully ',
+    'update_data' => 'Update Data',
+    'no_records_found' => 'No records found',
     // UI elements
     'ui_elements' => 'UI elements',
     'colors' => 'Colors',
@@ -29,6 +48,7 @@ return [
 
     // Widgets
     'widgets_new' => 'Widgets New',
+
 
     // Forms
     'forms' => 'Forms',

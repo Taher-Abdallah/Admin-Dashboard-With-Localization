@@ -7,6 +7,7 @@ use App\Http\Controllers\FrontController;
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SettingController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
@@ -38,6 +39,10 @@ Route::controller(AdminController::class)->prefix(LaravelLocalization::setLocale
         // ============================================================  featuresController
         Route::controller(FeatureController::class)->group(function () {
             Route::resource('features', FeatureController::class);
+        });
+        // ============================================================  settingsController
+        Route::controller(SettingController::class)->group(function () {
+            Route::resource('settings', SettingController::class)->only(['index', 'update']);
         });
 
 

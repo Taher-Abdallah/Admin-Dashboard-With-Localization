@@ -35,6 +35,17 @@ return [
     'deleted_successfully' => 'Deleted Successfully ',
     'update_data' => 'Update Data',
     'no_records_found' => 'No records found',
+
+    //settings
+    'settings' => 'Settings',
+    'address' => 'Address',
+    'phone' => 'Phone',
+    'email' => 'Email',
+    'facebook' => 'Facebook',
+    'twitter' => 'Twitter',
+    'instagram' => 'Instagram',
+    'linkedin' => 'Linkedin',
+    'youtube' => 'Youtube',
     // UI elements
     'ui_elements' => 'UI elements',
     'colors' => 'Colors',

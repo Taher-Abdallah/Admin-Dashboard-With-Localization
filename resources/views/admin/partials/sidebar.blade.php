@@ -28,6 +28,8 @@
                             {{-- features-nav --}}
                             <x-side-bar  title="features"  href="{{ route('features.index') }} " icon="fe-monitor"></x-side-bar>
                             {{-- settings-nav --}}
-        <x-side-bar  title="settings"  href="{{ route('settings.index') }} " icon="fe-settings"></x-side-bar>
+                            <x-side-bar  title="settings"  href="{{ route('settings.index') }} " icon="fe-settings"></x-side-bar>
+                            {{-- testmonials-nav --}}
+                            <x-side-bar  title="testmonials"  href="{{ route('testmonials.index') }} " icon="fe-bookmark"></x-side-bar>
 
       </aside>

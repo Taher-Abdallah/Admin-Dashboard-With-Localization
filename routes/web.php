@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Feature;
+use App\Models\Testmonial;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FrontController;
@@ -8,6 +9,7 @@ use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\TestmonialController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
@@ -43,6 +45,10 @@ Route::controller(AdminController::class)->prefix(LaravelLocalization::setLocale
         // ============================================================  settingsController
         Route::controller(SettingController::class)->group(function () {
             Route::resource('settings', SettingController::class)->only(['index', 'update']);
+        });
+        // ============================================================  testmonialsController
+        Route::controller(TestmonialController::class)->group(function () {
+            Route::resource('testmonials', TestmonialController::class);
         });
 
 

@@ -46,6 +46,9 @@ return [
     'instagram' => 'Instagram',
     'linkedin' => 'Linkedin',
     'youtube' => 'Youtube',
+    'testmonials'=>'Testmonials',
+    'name' => 'Name',
+    'position' => 'Position',
     // UI elements
     'ui_elements' => 'UI elements',
     'colors' => 'Colors',

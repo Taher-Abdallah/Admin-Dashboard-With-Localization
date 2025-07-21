@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Providers;
-
-use view;
+use App\Models\Setting;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class SettingProvider extends ServiceProvider
@@ -20,6 +20,7 @@ class SettingProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // view::share('setting', $setting);
+        $setting= Setting::findorfail(1);
+        View::share('setting', $setting);
     }
 }

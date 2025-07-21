@@ -18,8 +18,9 @@ Motivated and detail-oriented software engineer with experience in Laravel, REST
 
 ## Education
 
-### B.Sc. in Engineering  
-**Mansoura University**  
+### B.Sc. in Computer and Communication Engineering  
+**Mansoura University – Faculty of Engineering**  
+_Department of Computer and Communication Engineering (CCE)_  
 _Graduation Year: 2026_
 
 ---
